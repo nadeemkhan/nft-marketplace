@@ -33,6 +33,6 @@ const SentryWebpackPluginOptions = {
 }
 
 module.exports =
-  (process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.SENTRY_DSN) && process.env.SENTRY_AUTH_TOKEN
+  (process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.SENTRY_DSN) && process.env.SENTRY_AUTH_TOKEN;
     ? withSentryConfig(moduleExports, SentryWebpackPluginOptions)
     : moduleExports
